@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Custom Properties ──────────────────────────────────────────────────── */
+:root {
+  --sage-500: #465444;
+  --sage-700: #29372D;
+  --ivory: #F7F1E6;
+  --ivory-light: #FFFDF8;
+  --champagne: #C5A46D;
+  --beige: #D8C7AF;
+  --text-primary: #29372D;
+  --text-secondary: #465444;
+}
+
+/* ─── Base ────────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--ivory);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* ─── Arabic Font Rendering ──────────────────────────────────────────────── */
+.arabic-text {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  line-height: 2;
+  font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+/* ─── Paper Grain Texture Overlay ────────────────────────────────────────── */
+.paper-grain {
+  position: relative;
+}
+
+.paper-grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+/* ─── Gold Shimmer Text ──────────────────────────────────────────────────── */
+.gold-shimmer {
+  background: linear-gradient(
+    105deg,
+    #A88B55 0%,
+    #C5A46D 25%,
+    #E8D5A8 50%,
+    #C5A46D 75%,
+    #A88B55 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-slide 4s ease-in-out infinite;
+}
+
+/* ─── Stationery Card ────────────────────────────────────────────────────── */
+.stationery-card {
+  background-color: var(--ivory-light);
+  position: relative;
+}
+
+.stationery-card::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 1px solid var(--champagne);
+  opacity: 0.35;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* ─── Glow Effect ────────────────────────────────────────────────────────── */
+.glow-gold {
+  box-shadow:
+    0 0 15px rgba(197, 164, 109, 0.08),
+    0 0 40px rgba(197, 164, 109, 0.04);
+}
+
+.glow-gold-strong {
+  box-shadow:
+    0 0 20px rgba(197, 164, 109, 0.15),
+    0 0 60px rgba(197, 164, 109, 0.06),
+    inset 0 0 30px rgba(197, 164, 109, 0.03);
+}
+
+/* ─── Sparkle Particle ───────────────────────────────────────────────────── */
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #C5A46D 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ─── Draw Line Animation ────────────────────────────────────────────────── */
+.draw-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.draw-line.animate {
+  animation: draw-svg 2s ease-out forwards;
+}
+
+/* ─── Animations ─────────────────────────────────────────────────────────── */
+@keyframes shimmer-slide {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(197, 164, 109, 0.25), 0 0 0 0 rgba(197, 164, 109, 0.1); }
+  50% { box-shadow: 0 0 25px 5px rgba(197, 164, 109, 0.12), 0 0 50px 15px rgba(197, 164, 109, 0.05); }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-8px) rotate(1deg); }
+  66% { transform: translateY(-4px) rotate(-0.5deg); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(6px) rotate(-1deg); }
+  66% { transform: translateY(3px) rotate(0.5deg); }
+}
+
+@keyframes draw-svg {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+@keyframes wax-seal-break {
+  0% { transform: scale(1) rotate(0deg); opacity: 1; }
+  30% { transform: scale(1.15) rotate(5deg); opacity: 1; }
+  60% { transform: scale(1.3) rotate(-3deg); opacity: 0.6; }
+  100% { transform: scale(1.5) rotate(8deg); opacity: 0; }
+}
+
+@keyframes reveal-up {
+  from { clip-path: inset(100% 0 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ─── Utility Classes ────────────────────────────────────────────────────── */
+.animate-pulse-gold {
+  animation: pulse-gold 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float-gentle 8s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 9s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-gentle 12s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 40s linear infinite;
+}
+
+.animate-breathe {
+  animation: breathe 5s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* ─── Selection ──────────────────────────────────────────────────────────── */
+::selection {
+  background-color: rgba(197, 164, 109, 0.25);
+  color: var(--sage-700);
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--beige);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--champagne);
+}
+
+/* ─── Scroll Progress Bar ────────────────────────────────────────────────── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #C5A46D, #E8D5A8, #C5A46D);
+  z-index: 9999;
+  transform-origin: left;
+}
+
+/* ─── Reduced Motion ─────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .gold-shimmer {
+    animation: none;
+    background-position: 0% center;
+  }
+}

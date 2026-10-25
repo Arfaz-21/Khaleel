@@ -107,7 +107,7 @@ export function WeddingHero({ reducedMotion }: WeddingHeroProps) {
         <motion.div {...fadeUp(0.15)} className="mb-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-champagne/40 bg-white/60 backdrop-blur-sm shadow-sm mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-champagne" />
-            <span className="text-[10px] md:text-xs font-cinzel tracking-[0.35em] uppercase text-champagne font-semibold">
+            <span className="text-[10px] md:text-xs font-cinzel tracking-[0.35em] uppercase text-sage-800 font-semibold">
               In The Name Of Allah · Most Gracious · Most Merciful
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-champagne" />
@@ -150,30 +150,30 @@ export function WeddingHero({ reducedMotion }: WeddingHeroProps) {
 
         {/* Couple Names Section with Grand Typography */}
         <motion.div {...fadeUp(0.55)} className="my-6">
-          <p className="text-xs md:text-sm font-cinzel tracking-[0.35em] uppercase text-sage-500 mb-3">
+          <p className="text-xs md:text-sm font-cinzel tracking-[0.35em] uppercase text-sage-600 font-semibold mb-3">
             Together with their beloved families
           </p>
 
           <div className="py-2 relative">
-            <h1 className="font-bodoni font-normal text-5xl sm:text-7xl md:text-8xl text-sage-800 tracking-wide leading-none">
-              <span className="block hover:scale-[1.01] transition-transform gold-shimmer drop-shadow-sm">
+            <h1 className="font-bodoni font-semibold text-5xl sm:text-7xl md:text-8xl text-[#1a251e] tracking-wide leading-none">
+              <span className="block hover:scale-[1.01] transition-transform drop-shadow-[0_2px_4px_rgba(41,55,45,0.08)]">
                 {wedding.groom.toUpperCase()}
               </span>
-              <span className="font-pinyon text-champagne text-5xl sm:text-7xl md:text-8xl my-1 block font-normal leading-tight">
+              <span className="font-pinyon text-[#9c783c] text-5xl sm:text-7xl md:text-8xl my-1 block font-semibold leading-tight drop-shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
                 &amp;
               </span>
-              <span className="block hover:scale-[1.01] transition-transform gold-shimmer drop-shadow-sm">
+              <span className="block hover:scale-[1.01] transition-transform drop-shadow-[0_2px_4px_rgba(41,55,45,0.08)]">
                 {wedding.bride.toUpperCase()}
               </span>
             </h1>
           </div>
 
           <div className="mt-6 flex items-center justify-center gap-3">
-            <span className="h-px w-10 bg-champagne/50" />
-            <span className="text-xs md:text-sm uppercase tracking-[0.35em] font-cinzel text-champagne font-semibold">
+            <span className="h-px w-10 bg-champagne/60" />
+            <span className="text-xs md:text-sm uppercase tracking-[0.35em] font-cinzel text-sage-800 font-bold">
               Invite You To Their Nikah Ceremony
             </span>
-            <span className="h-px w-10 bg-champagne/50" />
+            <span className="h-px w-10 bg-champagne/60" />
           </div>
         </motion.div>
 

@@ -127,8 +127,8 @@ export function InvitationIntro({ onOpen, reducedMotion }: InvitationIntroProps)
               <span className="text-[10px] tracking-[0.35em] text-champagne font-cinzel uppercase mb-1">
                 The Wedding Of
               </span>
-              <h2 className="text-2xl md:text-3xl font-bodoni font-normal text-sage-700 tracking-wide">
-                {wedding.groom} <span className="font-pinyon text-champagne text-3xl font-normal">&amp;</span> {wedding.bride}
+              <h2 className="text-2xl md:text-3xl font-bodoni font-semibold text-sage-900 tracking-wide">
+                {wedding.groom} <span className="font-pinyon text-[#9c783c] text-3xl font-semibold">&amp;</span> {wedding.bride}
               </h2>
               <div className="w-16 h-px bg-champagne/40 my-2" />
               <p className="text-[11px] font-cinzel tracking-widest text-sage-500 uppercase">

@@ -48,8 +48,8 @@ export function InvitationIntro({ onOpen, reducedMotion }: InvitationIntroProps)
   return (
     <motion.div
       className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-[#1b261e] via-[#243328] to-[#1a231d] px-4 py-8 overflow-hidden select-none"
-      exit={{ opacity: 0, scale: 1.05 }}
-      transition={{ duration: 0.85, ease: [0.43, 0.13, 0.23, 0.96] }}
+      exit={{ opacity: 0, scale: 1.08, y: -30 }}
+      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
     >
       {/* Background ambient glow circles */}
       <div className="absolute w-[500px] h-[500px] rounded-full bg-champagne/5 blur-[120px] pointer-events-none" />

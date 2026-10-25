@@ -16,7 +16,9 @@ export function EventDetails() {
   };
 
   return (
-    <section id="details" className="py-24 md:py-32 px-4 bg-gradient-to-b from-[#FAF6EE] via-[#F4EDE1] to-[#FAF6EE]">
+    <section id="details" className="py-24 md:py-32 px-4 bg-gradient-to-b from-[#F2EAE0] via-[#F8F2E6] to-[#EFE7D8] islamic-pattern-bg paper-grain relative overflow-hidden">
+      {/* Ambient center lighting */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-champagne/6 blur-[120px] pointer-events-none" />
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">

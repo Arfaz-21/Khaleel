@@ -53,7 +53,7 @@ export function ShareInvitation() {
   };
 
   return (
-    <section id="share" className="py-24 md:py-32 px-4 bg-gradient-to-b from-[#FAF6EE] via-[#F4EDE1] to-[#EFE7D8] relative overflow-hidden">
+    <section id="share" className="py-24 md:py-32 px-4 bg-gradient-to-b from-[#FAF6EE] via-[#F4EDE1] to-[#EFE7D8] relative overflow-hidden islamic-pattern-bg paper-grain">
       <motion.div
         ref={ref}
         className="max-w-xl mx-auto text-center relative z-10"

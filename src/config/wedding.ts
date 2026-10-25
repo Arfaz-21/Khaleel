@@ -3,7 +3,7 @@ export const wedding = {
   // ── Couple ──────────────────────────────────────────────────────────────────
   groom: 'Khaleel',
   bride: 'Murshida',
-  coupleShort: 'K & M',
+  coupleShort: 'M & K',
 
   // ── Ceremony ────────────────────────────────────────────────────────────────
   ceremony: 'Nikah',

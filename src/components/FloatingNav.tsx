@@ -78,7 +78,7 @@ export function FloatingNav({ onShareClick }: FloatingNavProps) {
       >
         {/* Monogram stamp */}
         <span className="font-cormorant text-xs tracking-widest text-champagne px-2 border-r border-champagne/20">
-          K &amp; M
+          M &amp; K
         </span>
 
         {/* Ambient Sound Button */}

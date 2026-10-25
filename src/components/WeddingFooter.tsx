@@ -11,7 +11,7 @@ const RoyalFooterMonogram = () => (
     <circle cx="80" cy="80" r="74" stroke="currentColor" strokeWidth="0.8" opacity="0.4" />
     <circle cx="80" cy="80" r="68" stroke="currentColor" strokeWidth="0.4" strokeDasharray="3 3" opacity="0.3" />
 
-    {/* K */}
+    {/* M */}
     <text
       x="50"
       y="94"
@@ -22,7 +22,7 @@ const RoyalFooterMonogram = () => (
       textAnchor="middle"
       opacity="0.9"
     >
-      K
+      M
     </text>
 
     {/* & */}
@@ -38,7 +38,7 @@ const RoyalFooterMonogram = () => (
       &amp;
     </text>
 
-    {/* M */}
+    {/* K */}
     <text
       x="110"
       y="94"
@@ -49,7 +49,7 @@ const RoyalFooterMonogram = () => (
       textAnchor="middle"
       opacity="0.9"
     >
-      M
+      K
     </text>
 
     {/* Crown dot */}

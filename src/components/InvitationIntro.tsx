@@ -27,7 +27,7 @@ export function InvitationIntro({ onOpen, reducedMotion }: InvitationIntroProps)
     return (
       <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-sage-700 text-ivory-light px-6 text-center">
         <div className="w-24 h-24 rounded-full border border-champagne/40 flex items-center justify-center mb-6">
-          <span className="font-cormorant text-2xl text-champagne">K &amp; M</span>
+          <span className="font-cormorant text-2xl text-champagne">M &amp; K</span>
         </div>
         <p className="text-xs uppercase tracking-[0.35em] text-champagne/80 font-jakarta mb-2">
           Royal Nikah Invitation
@@ -184,7 +184,7 @@ export function InvitationIntro({ onOpen, reducedMotion }: InvitationIntroProps)
               {/* Seal Monogram */}
               <div className="flex flex-col items-center justify-center text-center">
                 <span className="font-cinzel font-semibold text-lg md:text-xl text-[#3b2b10] drop-shadow-sm tracking-widest leading-none">
-                  K &amp; M
+                  M &amp; K
                 </span>
                 <span className="text-[7px] uppercase tracking-tighter text-[#4a3614] font-cinzel mt-0.5 font-bold">
                   NIKAH
